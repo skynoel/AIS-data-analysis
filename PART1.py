@@ -33,7 +33,7 @@ for i in sheet["B"]:
     B=i.value
     y.append(B)
 plt.plot(x, y, marker='.')
-plt.xlabel('month')
-plt.ylabel('salary income')
-plt.title('the income for each month')
+plt.xlabel('小時')
+plt.ylabel('每分鐘封包數')
+plt.title('每日個小時頻道每分鐘封包數平均值')
 plt.show()

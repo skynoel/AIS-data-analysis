@@ -38,16 +38,18 @@ file2=AIS.mad.avperm(file)  #將經過時間碼標記的原始資料轉變為個
 AIS.mad.graph(file2)    #利用該資料繪製成MAD
 
 import AIS.patd  
-
-
+file3=AIS.patd.chose(file2)#在MAD資料中以特定算法標記出封包數較多的時間
+AIS.patd.graph(file3)#利用該資料繪製成PATD表格
 
 import AIS.chr_patd   
-
+file4=AIS.chr_patd.search(file,file3)#根據PATD資料從原始資料中尋找出船舶MMSI碼
+file5=AIS.chr_patd.dynamic(file,file4)#利用MMSI碼提取原始資料中的船舶動態資訊並篩選出船種為漁船且船速低於3節的
 
 
 import AIS.asd
-#
-
+file6=AIS.asd.gis(file5)#將資料送入GIS系統中進行分析，並統計出不同區域之信號密度
+AIS.asd.graph(file6)#根據資料繪製成ASD圖表
 
 import AIS.pfg
-
+file7=AIS.pfg.filter(file6)#將資料中地理位置屬於在港狀態的封包數剔除
+AIS.pfg.graph(file7)#將最終資料產生PFG圖用作魚場區域分析

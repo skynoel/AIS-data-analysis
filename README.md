@@ -14,4 +14,5 @@
 2.學會Github  
 
 ## 說明文件
-[需求表](https://hackmd.io/@Skynoel/H1cYAKPc6)
+[需求表](https://hackmd.io/@Skynoel/H1cYAKPc6)  
+[Github教學](https://hackmd.io/@Skynoel/SkoFHXOc6)

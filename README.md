@@ -16,8 +16,6 @@
 ## 說明文件
 [需求表](https://hackmd.io/@Skynoel/H1cYAKPc6)  
 [Github教學](https://hackmd.io/@Skynoel/SkoFHXOc6)
+[UI需求](https://hackmd.io/@Skynoel/HyO-1Aucp)  
 
 ## 聊天
-為什麼網頁要用bootstrap阿阿
-bulma明明比較好看
-笑死哈哈

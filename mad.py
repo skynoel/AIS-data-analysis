@@ -20,6 +20,8 @@ for y in range(5):
     count[1][y]=" "
 for y in range(60):
     count[1][y+5]=y
+for y in range(60):
+    count[0][y+5]=" "
 row=2
 rowchange=13
 r2=30
@@ -57,5 +59,6 @@ for item in tqdm(items):
                 rowchange=data.iloc[3]
                 r2=data.iloc[2]
 result = pd.DataFrame(count)
-result.to_excel("mad20230603.xlsx")
+name="mad20230603.xlsx"
+result.to_excel(name)
 

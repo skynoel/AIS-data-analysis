@@ -29,6 +29,7 @@ for item in tqdm(items):
     # 構建完整的路徑
     item_path = os.path.join(folder_path, item)
     if os.path.isfile(item_path):
+        print("檔案:", item)
         df=pd.read_excel(item_path)
         for i in tqdm(range(df.shape[0])):
             data=df.iloc[i]

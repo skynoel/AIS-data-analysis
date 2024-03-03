@@ -1,3 +1,4 @@
+import re
 import openpyxl
 import os
 from openpyxl.styles import PatternFill
@@ -77,7 +78,24 @@ for x in range(2,sheet.max_row):
                 if sheet.cell(x+1,y+1).value==1:
                     sheet.cell(x+1,y+1).fill=fill
 
-
+sheet2 = wb.create_sheet("patd2")
+for x in range(0,sheet.max_row):
+    for y in range(0,sheet.max_column):
+        sheet2.cell(y+2,x+1).value=sheet.cell(x+1,y+1).value
+for x in range(1,sheet2.max_row):
+    for y in range(2,sheet2.max_column):
+        if sheet2.cell(x+1,y+1).value==1:
+            sheet2.cell(x+1,y+1).fill=fill
+for x in range(0,sheet2.max_row):
+    for col in sheet2.columns:
+            col_name = re.findall('\w\d', str(col[0]))
+            col_name = col_name[1]
+            col_name = re.findall('\w', str(col_name))[0]
+            sheet2.column_dimensions[col_name].width =9
+            sheet2.row_dimensions[x+2].height =50
+sheet2.cell(1,1).value="月平均值"
+sheet2.cell(1,2).value=mave
+del wb["Sheet"]
 name="patd202304.xlsx"
 wb.save(name)
 print("done")

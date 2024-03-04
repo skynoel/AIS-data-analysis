@@ -82,7 +82,7 @@ sheet2 = wb.create_sheet("patd2")
 for x in range(0,sheet.max_row):
     for y in range(0,sheet.max_column):
         sheet2.cell(y+2,x+1).value=sheet.cell(x+1,y+1).value
-for x in range(1,sheet2.max_row):
+for x in range(2,sheet2.max_row):
     for y in range(2,sheet2.max_column):
         if sheet2.cell(x+1,y+1).value==1:
             sheet2.cell(x+1,y+1).fill=fill

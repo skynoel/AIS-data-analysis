@@ -29,4 +29,5 @@ btn3 = tk.Button(root,text="確認",command=off,font=('Arial',15,'bold'))
 btn3.place(x=700,y=550,height=50,width=100,)
 mylabel = tk.Label(root, text="檔案：", font=('Arial',15,'bold'),bg="#D0D0D0")
 mylabel.place(x=100,y=100,height=50,width=70)
-root.mainloop()
+root.mainloop()   
+ 

@@ -4,7 +4,7 @@ import os
 from openpyxl.styles import PatternFill
 
 os.system("cls")
-
+ 
 dwb = openpyxl.load_workbook("patd202304.xlsx")  # Work Book
 s1 = dwb['patd2']  # Work Sheet
 wb = openpyxl.Workbook()

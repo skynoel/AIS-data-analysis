@@ -5,7 +5,7 @@ import os
 import matplotlib.pyplot as plt
 
 os.system("cls")
-
+ 
 pd.set_option('display.unicode.ambiguous_as_wide', True)
 pd.set_option('display.unicode.east_asian_width', True)
 pd.set_option('display.width', 180) 

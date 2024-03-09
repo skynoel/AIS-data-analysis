@@ -9,7 +9,7 @@ dwb = openpyxl.load_workbook("mad202304.xlsx")  # Work Book
 s1 = dwb['all']  # Work Sheet
 wb = openpyxl.Workbook()
 
-
+ 
 data =[[0]*65 for t in range(26)]
 result=[[0]*65 for t in range(26)]
 

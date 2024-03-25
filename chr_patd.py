@@ -1,4 +1,3 @@
-import re
 import openpyxl
 import os
 from openpyxl.styles import PatternFill
@@ -51,19 +50,6 @@ for x in range(2,sheet.max_row):
                     sheet.cell(x+1,y+1).fill=fill
                 if sheet.cell(x+1,y+1).value==2:
                     sheet.cell(x+1,y+1).fill=fill2
-
-
-
-
-
-
-
-
-
-
-
-
-
 del wb["Sheet"]
 name="chr_patd202304.xlsx"
 wb.save(name)
